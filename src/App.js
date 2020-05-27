@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useForm } from "./custom/useForm";
 
-function App() {
+const App = () => {
+  const [{ email, password }, handleChange] = useForm({
+    email: "",
+    password: "",
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <input type="email" value={email} name="email" onChange={handleChange} />
+      <input
+        type="password"
+        value={password}
+        name="password"
+        onChange={handleChange}
+      />
     </div>
   );
-}
+};
 
 export default App;
