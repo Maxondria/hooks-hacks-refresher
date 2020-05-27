@@ -8,8 +8,15 @@ const App = () => {
   });
   return (
     <div>
-      <input type="email" value={email} name="email" onChange={handleChange} />
       <input
+        type="email"
+        value={email}
+        name="email"
+        onChange={handleChange}
+        placeholder="Email"
+      />
+      <input
+        placeholder="Password"
         type="password"
         value={password}
         name="password"
